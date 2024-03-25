@@ -1,6 +1,39 @@
 # CipherDecryptor-Trio : Decrypting Shift Ciphers with Mathematics
 
-This repository presents "CipherDecryptor-Trio", a project by Rajpal, Ghildiyaal, and Madala, which applies mathematical analysis to decrypt shift ciphers. The tool combines exhaustive key search, chi-squared statistics, and Levenshtein distance in a novel approach to cryptanalysis.
+This repository houses the "CipherDecryptor-Trio" project, a comprehensive cryptanalysis tool designed to decrypt ciphertexts encrypted with shift ciphers. Developed by Harshit Rajpal, Pranav Ghildiyaal, and Purna Sai Madala as part of an academic endeavor, this project embodies the intersection of classical cryptography techniques and modern computational approaches.
+This cryptanalysis program is specifically designed to tackle the challenge of deciphering texts encrypted with various forms of shift ciphers. The encrypted texts (ciphertexts) are generated from English dictionary words and spaces, forming sequences that may not necessarily compose meaningful sentences for simplicity.
+
+**Encryption Overview**
+
+The ciphertexts are sequences derived from plaintexts by a series of transformation steps defined by a key sequence. Here, each symbol is either a space or one of the 26 lowercase letters from the English alphabet, without any special characters, punctuation, or uppercase letters.
+
+**Key and Ciphertext Structure**
+
+- **Key**: A sequence of \( t \) numbers, each ranging from 0 to 26.
+- **Ciphertext**: A sequence of symbols from the set \{\<space\>, a, ..., z\}.
+
+**Plaintext Dictionary**
+
+The program has access to a plaintext dictionary containing a number \( u \) of \( L \)-symbol candidate plaintexts, which are utilized in the cryptanalysis process.
+
+**Variability in Encryption**
+
+The cryptanalysis challenge involves various parameters, like \( L \), \( u \), and \( t \), and each challenge ciphertext could have been encrypted using a different variant of the encryption scheme, including:
+- Shift cipher (where \( t = 1 \))
+- Mono-alphabetic substitution cipher (where \( t = 27 \))
+- Poly-alphabetic substitution cipher (where \( t \ll 27 \))
+
+**Encryption Mechanism**
+
+The program must decipher the encryption schemes that introduce randomness into the ciphertexts to obscure the plaintext. For poly-alphabetic ciphers, this involves shifting the plaintext symbol \( m[i'] \) by a key-dependent number of positions. The introduction of randomness is controlled by a probability parameter \( \text{prob_of_random_ciphertext} \) and an undisclosed coin generation algorithm.
+
+**Objectives of the Cryptanalysis Program**
+
+The aim is to output the most likely \( L \)-symbol plaintext for any given ciphertext, leveraging the commonalities across the encryption schemes used:
+
+- **Message Space**: Set \{\<space\>, a, ..., z\}\(^L\).
+- **Ciphertext Space**: Set \{\<space\>, a, ..., z\}\(^{L+r}\), where \( r \geq 0 \).
+- **Key Space**: Set \{0, ..., 26\}\(^t\).
 
 
 ## Mathematical Foundations
@@ -67,3 +100,4 @@ Special thanks to all the contributors who have invested their time and expertis
 - Purna Sai Madala
 
 Their dedication and collaborative spirit have been the backbone of this project's success.
+
