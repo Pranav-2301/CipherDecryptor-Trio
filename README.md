@@ -1,6 +1,6 @@
-# CipherDecryptor-Trio : Decrypting Shift Ciphers with Mathematics
+# Shift Cipher Cryptanalysis : Decrypting Shift Ciphers with Statistics and Frequency Analysis
 
-This repository houses the "CipherDecryptor-Trio" project, a comprehensive cryptanalysis tool designed to decrypt ciphertexts encrypted with shift ciphers. Developed by Harshit Rajpal, Pranav Ghildiyaal, and Purna Sai Madala as part of an academic endeavor, this project embodies the intersection of classical cryptography techniques and modern computational approaches.
+This repository houses the "Shift Cipher Cryptanalysis" project, a comprehensive cryptanalysis tool designed to decrypt ciphertexts encrypted with shift ciphers. Developed by Harshit Rajpal, Pranav Ghildiyaal, and Purna Sai Madala as part of an academic endeavor, this project embodies the intersection of classical cryptography techniques and modern computational approaches.
 This cryptanalysis program is specifically designed to tackle the challenge of deciphering texts encrypted with various forms of shift ciphers. The encrypted texts (ciphertexts) are generated from English dictionary words and spaces, forming sequences that may not necessarily compose meaningful sentences for simplicity.
 
 **Encryption Overview**
@@ -82,6 +82,18 @@ Function exhaustive_key_search(ciphertext, possible_keys)
   Return "Decryption failed"
 ```
 
+## Outcomes 
+
+**Mismatch VS Randomness**
+
+<img width="818" alt="image" src="https://github.com/Pranav-2301/CipherDecryptor-Trio/assets/82222889/6ee8dead-a619-4306-9dfe-4fb9d6892dcc">
+
+
+**Processing Time VS Randomness**
+<img width="772" alt="image" src="https://github.com/Pranav-2301/CipherDecryptor-Trio/assets/82222889/36ddc1cc-4f63-4c9c-9a10-5f24d751488d">
+
+
+
 ## Importance
 
 Despite its simplicity, it can be computationally expensive and time-consuming, especially for long keys. However, it guarantees that if the key is in the key space, it will be found.
@@ -93,7 +105,7 @@ This multi-faceted approach allows our tool to tackle various scenarios ranging 
 
 ## Acknowledgements
 
-Special thanks to all the contributors who have invested their time and expertise into refining the "CipherDecryptor-Trio" project:
+Special thanks to all the contributors who have invested their time and expertise into refining the "Shift Cipher Cryptanalysis" project:
 
 - Harshit Rajpal 
 - Pranav Ghildiyaal
